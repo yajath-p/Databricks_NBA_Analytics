@@ -1,0 +1,2648 @@
+{
+  "datasets": [
+    {
+      "name": "d06f3bd5",
+      "displayName": "nba_gold_historical_roster",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_historical_roster ORDER BY NICKNAME"
+      ]
+    },
+    {
+      "name": "f46f7224",
+      "displayName": "nba_gold_player_game_performance",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_player_game_performance"
+      ]
+    },
+    {
+      "name": "dcc6b440",
+      "displayName": "nba_gold_player_season_stats",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_player_season_stats ORDER BY SEASON"
+      ]
+    },
+    {
+      "name": "2697a6c0",
+      "displayName": "nba_silver_teams",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_silver_teams ORDER BY NICKNAME"
+      ]
+    },
+    {
+      "name": "74eb0987",
+      "displayName": "nba_silver_ranking",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_silver_ranking"
+      ]
+    },
+    {
+      "name": "62512f0b",
+      "displayName": "nba_gold_player_opponent_stats",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_player_opponent_stats"
+      ]
+    },
+    {
+      "name": "c335e7ca",
+      "displayName": "nba_gold_team_season_stats",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_team_season_stats"
+      ]
+    },
+    {
+      "name": "5e90886a",
+      "displayName": "nba_gold_team_season_stats",
+      "queryLines": [
+        "SELECT * FROM workspace.nba_analytics.nba_gold_team_season_stats"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "f9984fd5",
+      "displayName": "Teams Facts",
+      "layout": [
+        {
+          "widget": {
+            "name": "teams-by-season",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d06f3bd5",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "NICKNAME",
+                      "expression": "`NICKNAME`"
+                    },
+                    {
+                      "name": "CITY",
+                      "expression": "`CITY`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100002,
+                    "title": "PLAYER_NAME",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "SEASON",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100003,
+                    "title": "SEASON",
+                    "allowSearch": true,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "NICKNAME",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100005,
+                    "title": "NICKNAME",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "CITY",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100006,
+                    "title": "CITY",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false,
+                    "cellFormat": {
+                      "default": {
+                        "foregroundColor": null
+                      },
+                      "rules": []
+                    }
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "TEAM_ID",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100000,
+                  "title": "TEAM_ID",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "PLAYER_ID",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100001,
+                  "title": "PLAYER_ID",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "ABBREVIATION",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100004,
+                  "title": "ABBREVIATION",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "title": "Roster by Season",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 2,
+            "height": 19
+          }
+        },
+        {
+          "widget": {
+            "name": "15344da4",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2697a6c0",
+                  "fields": [
+                    {
+                      "name": "YEARFOUNDED",
+                      "expression": "`YEARFOUNDED`"
+                    },
+                    {
+                      "name": "CITY",
+                      "expression": "`CITY`"
+                    },
+                    {
+                      "name": "ARENA",
+                      "expression": "`ARENA`"
+                    },
+                    {
+                      "name": "ARENACAPACITY",
+                      "expression": "`ARENACAPACITY`"
+                    },
+                    {
+                      "name": "OWNER",
+                      "expression": "`OWNER`"
+                    },
+                    {
+                      "name": "GENERALMANAGER",
+                      "expression": "`GENERALMANAGER`"
+                    },
+                    {
+                      "name": "DLEAGUEAFFILIATION",
+                      "expression": "`DLEAGUEAFFILIATION`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "YEARFOUNDED",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100006,
+                    "title": "YEARFOUNDED",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "CITY",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100007,
+                    "title": "CITY",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "ARENA",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100008,
+                    "title": "ARENA",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "ARENACAPACITY",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100009,
+                    "title": "ARENACAPACITY",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "OWNER",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100010,
+                    "title": "OWNER",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "GENERALMANAGER",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100011,
+                    "title": "GENERALMANAGER",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "DLEAGUEAFFILIATION",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100013,
+                    "title": "DLEAGUEAFFILIATION",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "LEAGUE_ID",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100000,
+                  "title": "LEAGUE_ID",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "TEAM_ID",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100001,
+                  "title": "TEAM_ID",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "MIN_YEAR",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100002,
+                  "title": "MIN_YEAR",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "MAX_YEAR",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100003,
+                  "title": "MAX_YEAR",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "ABBREVIATION",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100004,
+                  "title": "ABBREVIATION",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "NICKNAME",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100005,
+                  "title": "NICKNAME",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "HEADCOACH",
+                  "type": "string",
+                  "displayAs": "string",
+                  "order": 100012,
+                  "title": "HEADCOACH",
+                  "allowSearch": false,
+                  "alignContent": "left",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                },
+                {
+                  "dateTimeFormat": "DD/MM/YYYY HH:mm:ss.SSS",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "ingest_timestamp",
+                  "type": "datetime",
+                  "displayAs": "datetime",
+                  "order": 100014,
+                  "title": "ingest_timestamp",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false,
+              "frame": {
+                "showTitle": false
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 1,
+            "width": 4,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "9ac655f1",
+            "queries": [
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe418411152b8f7dbf874e84434f_NICKNAME",
+                "query": {
+                  "datasetName": "d06f3bd5",
+                  "fields": [
+                    {
+                      "name": "NICKNAME",
+                      "expression": "`NICKNAME`"
+                    },
+                    {
+                      "name": "NICKNAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe50e03b133b95e70c1ffa429d5b_NICKNAME",
+                "query": {
+                  "datasetName": "c335e7ca",
+                  "fields": [
+                    {
+                      "name": "NICKNAME",
+                      "expression": "`NICKNAME`"
+                    },
+                    {
+                      "name": "NICKNAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "NICKNAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe418411152b8f7dbf874e84434f_NICKNAME"
+                  },
+                  {
+                    "fieldName": "NICKNAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe50e03b133b95e70c1ffa429d5b_NICKNAME"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true,
+                "title": ""
+              },
+              "disallowAll": false,
+              "selection": {
+                "defaultSelection": {
+                  "operator": {
+                    "operator": "AND",
+                    "args": []
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "teams-founded-over-time",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2697a6c0",
+                  "fields": [
+                    {
+                      "name": "CITY",
+                      "expression": "`CITY`"
+                    },
+                    {
+                      "name": "YEARFOUNDED",
+                      "expression": "`YEARFOUNDED`"
+                    },
+                    {
+                      "name": "count(TEAM_ID)",
+                      "expression": "COUNT(`TEAM_ID`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "YEARFOUNDED",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "count(TEAM_ID)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "CITY",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": false
+                },
+                "extra": [
+                  {
+                    "fieldName": "CITY"
+                  }
+                ]
+              },
+              "frame": {
+                "title": "Teams Founded Over Time",
+                "showTitle": true,
+                "showDescription": false
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 14,
+            "width": 4,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "arena-capacity-by-team",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2697a6c0",
+                  "fields": [
+                    {
+                      "name": "ABBREVIATION",
+                      "expression": "`ABBREVIATION`"
+                    },
+                    {
+                      "name": "sum(ARENACAPACITY)",
+                      "expression": "SUM(`ARENACAPACITY`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "ABBREVIATION",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(ARENACAPACITY)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Arena Capacity by Team",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 20,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "b1955ce8",
+            "queries": [
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe418411152b8f7dbf874e84434f_SEASON",
+                "query": {
+                  "datasetName": "d06f3bd5",
+                  "fields": [
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "SEASON_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "SEASON",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe418411152b8f7dbf874e84434f_SEASON"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 1,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "675ebf23",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c335e7ca",
+                  "fields": [
+                    {
+                      "name": "win_pct",
+                      "expression": "`win_pct`"
+                    },
+                    {
+                      "name": "CITY",
+                      "expression": "`CITY`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "avg_fg_pct",
+                      "expression": "`avg_fg_pct`"
+                    },
+                    {
+                      "name": "avg_pts_per_game",
+                      "expression": "`avg_pts_per_game`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_fg_pct",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_pts_per_game",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "win_pct",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "extra": [
+                  {
+                    "fieldName": "CITY"
+                  },
+                  {
+                    "fieldName": "SEASON",
+                    "format": {
+                      "type": "number-plain",
+                      "abbreviation": "none",
+                      "decimalPlaces": {
+                        "type": "all"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 6,
+            "width": 2,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "b3bde66a",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "5e90886a",
+                  "fields": [
+                    {
+                      "name": "avg(win_pct)",
+                      "expression": "AVG(`win_pct`)"
+                    },
+                    {
+                      "name": "ABBREVIATION",
+                      "expression": "`ABBREVIATION`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "ABBREVIATION",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(win_pct)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "avg(win_pct)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 20,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "win-percentage-by-team",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "c335e7ca",
+                  "fields": [
+                    {
+                      "name": "avg(total_wins)",
+                      "expression": "AVG(`total_wins`)"
+                    },
+                    {
+                      "name": "avg_fg_pct",
+                      "expression": "`avg_fg_pct`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "avg(total_wins)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "avg_fg_pct",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "extra": [
+                  {
+                    "fieldName": "SEASON",
+                    "format": {
+                      "type": "number-plain",
+                      "abbreviation": "none",
+                      "decimalPlaces": {
+                        "type": "all"
+                      },
+                      "hideGroupSeparator": true
+                    }
+                  }
+                ]
+              },
+              "frame": {
+                "title": "AVG FG PCT Correlated with the amount of wins",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 6,
+            "width": 2,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "home-vs-road-record",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "74eb0987",
+                  "fields": [
+                    {
+                      "name": "CONFERENCE",
+                      "expression": "`CONFERENCE`"
+                    },
+                    {
+                      "name": "TEAM",
+                      "expression": "`TEAM`"
+                    },
+                    {
+                      "name": "avg(W_PCT)",
+                      "expression": "AVG(`W_PCT`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "TEAM",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(W_PCT)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "CONFERENCE",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Team Wins by Conference",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 26,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "winning-percentage-by-conference",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "74eb0987",
+                  "fields": [
+                    {
+                      "name": "avg(W_PCT)",
+                      "expression": "AVG(`W_PCT`)"
+                    },
+                    {
+                      "name": "CONFERENCE",
+                      "expression": "`CONFERENCE`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "avg(W_PCT)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "CONFERENCE",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "East",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      },
+                      {
+                        "value": "West",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      }
+                    ]
+                  }
+                }
+              },
+              "frame": {
+                "title": "Winning Percentage by Conference",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 26,
+            "width": 3,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "c18e5f2c",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "a5e2529d",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS"
+    },
+    {
+      "name": "eab0b372",
+      "displayName": "Players Stats",
+      "layout": [
+        {
+          "widget": {
+            "name": "field-goal-percentage-by-team",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f46f7224",
+                  "fields": [
+                    {
+                      "name": "TEAM_CITY",
+                      "expression": "`TEAM_CITY`"
+                    },
+                    {
+                      "name": "min(FG_PCT)",
+                      "expression": "MIN(`FG_PCT`)"
+                    },
+                    {
+                      "name": "q1(FG_PCT)",
+                      "expression": "PERCENTILE(`FG_PCT`, 0.25)"
+                    },
+                    {
+                      "name": "median(FG_PCT)",
+                      "expression": "MEDIAN(`FG_PCT`)"
+                    },
+                    {
+                      "name": "q3(FG_PCT)",
+                      "expression": "PERCENTILE(`FG_PCT`, 0.75)"
+                    },
+                    {
+                      "name": "max(FG_PCT)",
+                      "expression": "MAX(`FG_PCT`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "box",
+              "encodings": {
+                "x": {
+                  "fieldName": "TEAM_CITY",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "whiskerStart": {
+                    "fieldName": "min(FG_PCT)"
+                  },
+                  "boxStart": {
+                    "fieldName": "q1(FG_PCT)"
+                  },
+                  "boxMid": {
+                    "fieldName": "median(FG_PCT)"
+                  },
+                  "boxEnd": {
+                    "fieldName": "q3(FG_PCT)"
+                  },
+                  "whiskerEnd": {
+                    "fieldName": "max(FG_PCT)"
+                  },
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Field Goal Percentage by Player on Team",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 3,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "eabc136c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "avg_pts",
+                      "expression": "`avg_pts`"
+                    },
+                    {
+                      "name": "avg_ast",
+                      "expression": "`avg_ast`"
+                    },
+                    {
+                      "name": "avg_reb",
+                      "expression": "`avg_reb`"
+                    },
+                    {
+                      "name": "games_played",
+                      "expression": "`games_played`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "string",
+                    "displayAs": "string",
+                    "visible": true,
+                    "order": 100001,
+                    "title": "PLAYER_NAME",
+                    "allowSearch": false,
+                    "alignContent": "left",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "SEASON",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100002,
+                    "title": "SEASON",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "avg_pts",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100003,
+                    "title": "avg_pts",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "avg_ast",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100004,
+                    "title": "avg_ast",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "avg_reb",
+                    "numberFormat": "0.00",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "float",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100005,
+                    "title": "avg_reb",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  },
+                  {
+                    "fieldName": "games_played",
+                    "numberFormat": "0",
+                    "booleanValues": [
+                      "false",
+                      "true"
+                    ],
+                    "imageUrlTemplate": "{{ @ }}",
+                    "imageTitleTemplate": "{{ @ }}",
+                    "imageWidth": "",
+                    "imageHeight": "",
+                    "linkUrlTemplate": "{{ @ }}",
+                    "linkTextTemplate": "{{ @ }}",
+                    "linkTitleTemplate": "{{ @ }}",
+                    "linkOpenInNewTab": true,
+                    "type": "integer",
+                    "displayAs": "number",
+                    "visible": true,
+                    "order": 100006,
+                    "title": "games_played",
+                    "allowSearch": false,
+                    "alignContent": "right",
+                    "allowHTML": false,
+                    "highlightLinks": false,
+                    "useMonospaceFont": false,
+                    "preserveWhitespace": false
+                  }
+                ]
+              },
+              "invisibleColumns": [
+                {
+                  "numberFormat": "0",
+                  "booleanValues": [
+                    "false",
+                    "true"
+                  ],
+                  "imageUrlTemplate": "{{ @ }}",
+                  "imageTitleTemplate": "{{ @ }}",
+                  "imageWidth": "",
+                  "imageHeight": "",
+                  "linkUrlTemplate": "{{ @ }}",
+                  "linkTextTemplate": "{{ @ }}",
+                  "linkTitleTemplate": "{{ @ }}",
+                  "linkOpenInNewTab": true,
+                  "name": "PLAYER_ID",
+                  "type": "integer",
+                  "displayAs": "number",
+                  "order": 100000,
+                  "title": "PLAYER_ID",
+                  "allowSearch": false,
+                  "alignContent": "right",
+                  "allowHTML": false,
+                  "highlightLinks": false,
+                  "useMonospaceFont": false,
+                  "preserveWhitespace": false
+                }
+              ],
+              "allowHTMLByDefault": false,
+              "itemsPerPage": 25,
+              "paginationSize": "default",
+              "condensed": true,
+              "withRowNumber": false
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 1,
+            "width": 3,
+            "height": 8
+          }
+        },
+        {
+          "widget": {
+            "name": "2193f9f8",
+            "queries": [
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184891e85b14eddafef83262a_PLAYER_NAME",
+                "query": {
+                  "datasetName": "f46f7224",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "PLAYER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184d413a7a2911b2686872469_PLAYER_NAME",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "PLAYER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4e1bcc197eb9a22d2c50980772_PLAYER_NAME",
+                "query": {
+                  "datasetName": "62512f0b",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "PLAYER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184891e85b14eddafef83262a_PLAYER_NAME"
+                  },
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184d413a7a2911b2686872469_PLAYER_NAME"
+                  },
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4e1bcc197eb9a22d2c50980772_PLAYER_NAME"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "selection": {
+                "defaultSelection": {
+                  "values": {
+                    "dataType": "STRING",
+                    "values": [
+                      {
+                        "value": "LeBron James"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "player-season-stats",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62512f0b",
+                  "fields": [
+                    {
+                      "name": "OPP_CITY",
+                      "expression": "`OPP_CITY`"
+                    },
+                    {
+                      "name": "avg(AST)",
+                      "expression": "AVG(`AST`)"
+                    },
+                    {
+                      "name": "avg(BLK)",
+                      "expression": "AVG(`BLK`)"
+                    },
+                    {
+                      "name": "avg(REB)",
+                      "expression": "AVG(`REB`)"
+                    },
+                    {
+                      "name": "avg(PTS)",
+                      "expression": "AVG(`PTS`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "OPP_CITY",
+                  "axis": {
+                    "hideTitle": false
+                  },
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(PTS)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "OPP_CITY",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Boston",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 3
+                        }
+                      },
+                      {
+                        "value": "Atlanta",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      },
+                      {
+                        "value": "Brooklyn",
+                        "color": {
+                          "themeColorType": "canvasBackgroundColor"
+                        }
+                      },
+                      {
+                        "value": "Charlotte",
+                        "color": {
+                          "themeColorType": "selectionColor"
+                        }
+                      },
+                      {
+                        "value": "Chicago",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 4
+                        }
+                      },
+                      {
+                        "value": "Dallas",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      },
+                      {
+                        "value": "Denver",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      },
+                      {
+                        "value": "Golden State",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      },
+                      {
+                        "value": "Houston",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 4
+                        }
+                      },
+                      {
+                        "value": "Los Angeles",
+                        "color": "#650EC2"
+                      },
+                      {
+                        "value": "Memphis",
+                        "color": "#0544EB"
+                      },
+                      {
+                        "value": "Miami",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 4
+                        }
+                      },
+                      {
+                        "value": "Milwaukee",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 3
+                        }
+                      },
+                      {
+                        "value": "Minnesota",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 1
+                        }
+                      },
+                      {
+                        "value": "New York",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      },
+                      {
+                        "value": "Oklahoma City",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 2
+                        }
+                      },
+                      {
+                        "value": "Washington",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 4
+                        }
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true
+                },
+                "extra": [
+                  {
+                    "fieldName": "avg(AST)"
+                  },
+                  {
+                    "fieldName": "avg(BLK)"
+                  },
+                  {
+                    "fieldName": "avg(REB)"
+                  }
+                ]
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 9,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "player-game-diet",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62512f0b",
+                  "fields": [
+                    {
+                      "name": "OPP_CITY",
+                      "expression": "`OPP_CITY`"
+                    },
+                    {
+                      "name": "avg(AST)",
+                      "expression": "AVG(`AST`)"
+                    },
+                    {
+                      "name": "avg(PTS)",
+                      "expression": "AVG(`PTS`)"
+                    },
+                    {
+                      "name": "avg(REB)",
+                      "expression": "AVG(`REB`)"
+                    },
+                    {
+                      "name": "avg(STL)",
+                      "expression": "AVG(`STL`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "area",
+              "encodings": {
+                "x": {
+                  "fieldName": "OPP_CITY",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fields": [
+                    {
+                      "fieldName": "avg(AST)"
+                    },
+                    {
+                      "fieldName": "avg(PTS)"
+                    },
+                    {
+                      "fieldName": "avg(REB)"
+                    },
+                    {
+                      "fieldName": "avg(STL)"
+                    }
+                  ],
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Player Game Diet Versus other cities"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 9,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "dd06ec3d",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62512f0b",
+                  "fields": [
+                    {
+                      "name": "TEAM_CITY",
+                      "expression": "`TEAM_CITY`"
+                    },
+                    {
+                      "name": "avg(AST)",
+                      "expression": "AVG(`AST`)"
+                    },
+                    {
+                      "name": "avg(PTS)",
+                      "expression": "AVG(`PTS`)"
+                    },
+                    {
+                      "name": "avg(REB)",
+                      "expression": "AVG(`REB`)"
+                    },
+                    {
+                      "name": "avg(STL)",
+                      "expression": "AVG(`STL`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 1,
+              "widgetType": "combo",
+              "encodings": {
+                "y": {
+                  "primary": {
+                    "fields": [
+                      {
+                        "fieldName": "avg(AST)"
+                      },
+                      {
+                        "fieldName": "avg(PTS)"
+                      },
+                      {
+                        "fieldName": "avg(REB)"
+                      },
+                      {
+                        "fieldName": "avg(STL)"
+                      }
+                    ]
+                  },
+                  "secondary": {
+                    "fields": []
+                  },
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "label": {
+                  "show": false
+                },
+                "x": {
+                  "fieldName": "TEAM_CITY",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Player Game Diet Versus on Teams Player"
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 15,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "0a41312c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "62512f0b",
+                  "fields": [
+                    {
+                      "name": "monthly(GAME_DATE_EST)",
+                      "expression": "DATE_TRUNC(\"MONTH\", `GAME_DATE_EST`)"
+                    },
+                    {
+                      "name": "avg(AST)",
+                      "expression": "AVG(`AST`)"
+                    },
+                    {
+                      "name": "avg(PTS)",
+                      "expression": "AVG(`PTS`)"
+                    },
+                    {
+                      "name": "avg(REB)",
+                      "expression": "AVG(`REB`)"
+                    },
+                    {
+                      "name": "avg(STL)",
+                      "expression": "AVG(`STL`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "area",
+              "encodings": {
+                "x": {
+                  "fieldName": "monthly(GAME_DATE_EST)",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fields": [
+                    {
+                      "fieldName": "avg(AST)"
+                    },
+                    {
+                      "fieldName": "avg(PTS)"
+                    },
+                    {
+                      "fieldName": "avg(REB)"
+                    },
+                    {
+                      "fieldName": "avg(STL)"
+                    }
+                  ],
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "Monthly Performance over time"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 15,
+            "width": 3,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "1d1c9feb",
+      "displayName": "Comparison",
+      "layout": [
+        {
+          "widget": {
+            "name": "fc522797",
+            "queries": [
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184891e85b14eddafef83262a_PLAYER_NAME",
+                "query": {
+                  "datasetName": "f46f7224",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "PLAYER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              },
+              {
+                "name": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184d413a7a2911b2686872469_PLAYER_NAME",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "PLAYER_NAME_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-multi-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184891e85b14eddafef83262a_PLAYER_NAME"
+                  },
+                  {
+                    "fieldName": "PLAYER_NAME",
+                    "queryName": "dashboards/01f0fe3b7ad318768c08591ad4852a15/datasets/01f0fe4184d413a7a2911b2686872469_PLAYER_NAME"
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": true
+              },
+              "selection": {
+                "defaultSelection": {
+                  "values": {
+                    "dataType": "STRING",
+                    "values": [
+                      {
+                        "value": "LeBron James"
+                      },
+                      {
+                        "value": "Stephen Curry"
+                      },
+                      {
+                        "value": "Kevin Durant"
+                      },
+                      {
+                        "value": "Kyle Kuzma"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 2,
+            "y": 0,
+            "width": 2,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "cf2d6b12",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "avg_pts",
+                      "expression": "`avg_pts`"
+                    },
+                    {
+                      "name": "avg_ast",
+                      "expression": "`avg_ast`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_pts",
+                  "scale": {
+                    "type": "quantitative",
+                    "domain": {
+                      "min": 0,
+                      "max": 35
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_ast",
+                  "scale": {
+                    "type": "quantitative",
+                    "domain": {
+                      "min": 0,
+                      "max": 10
+                    }
+                  }
+                },
+                "color": {
+                  "fieldName": "PLAYER_NAME",
+                  "displayName": "Name",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "extra": [
+                  {
+                    "fieldName": "PLAYER_NAME"
+                  },
+                  {
+                    "fieldName": "SEASON",
+                    "format": {
+                      "type": "number-plain",
+                      "abbreviation": "none",
+                      "decimalPlaces": {
+                        "type": "all"
+                      },
+                      "significantFigures": {
+                        "type": "all"
+                      },
+                      "hideGroupSeparator": true
+                    }
+                  }
+                ]
+              },
+              "frame": {
+                "showTitle": false
+              },
+              "mark": {
+                "size": 0.3
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 1,
+            "width": 3,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "8d504bad",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "avg_pts",
+                      "expression": "`avg_pts`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "SEASON",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_pts",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "PLAYER_NAME",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "label": {
+                  "show": false
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 3,
+            "height": 9
+          }
+        },
+        {
+          "widget": {
+            "name": "726bb871",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "f46f7224",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "SEASON",
+                      "expression": "`SEASON`"
+                    },
+                    {
+                      "name": "avg(PTS)",
+                      "expression": "AVG(`PTS`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "SEASON",
+                  "format": {
+                    "type": "number-plain",
+                    "abbreviation": "compact",
+                    "decimalPlaces": {
+                      "type": "all"
+                    },
+                    "hideGroupSeparator": false
+                  },
+                  "axis": {
+                    "hideTitle": false,
+                    "hideLabels": true,
+                    "hideGrid": true
+                  },
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "natural-order"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg(PTS)",
+                  "scale": {
+                    "type": "quantitative",
+                    "reverse": false
+                  }
+                },
+                "color": {
+                  "fieldName": "PLAYER_NAME",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "mark": {
+                "layout": "group"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 10,
+            "width": 3,
+            "height": 7
+          }
+        },
+        {
+          "widget": {
+            "name": "home-vs-road-record",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "dcc6b440",
+                  "fields": [
+                    {
+                      "name": "PLAYER_NAME",
+                      "expression": "`PLAYER_NAME`"
+                    },
+                    {
+                      "name": "sum(games_played)",
+                      "expression": "SUM(`games_played`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "PLAYER_NAME",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "sum(games_played)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "PLAYER_NAME",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Games Played per Player",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 10,
+            "width": 3,
+            "height": 7
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "applyModeEnabled": false
+  }
+}
